@@ -55,10 +55,6 @@ extern SemaphoreHandle_t g_xConsoleTxCompleteSem;
 static TaskHandle_t xConsoleOwner = NULL;
 static uint32_t     xConsoleLockLevel = 0;
 
-/* Temporary buffer used to satisfy RX API */
-
-static uint8_t      rx_char;
-
 /* Lock out other tasks from accessing console */
 static void console_acquire(void);
 

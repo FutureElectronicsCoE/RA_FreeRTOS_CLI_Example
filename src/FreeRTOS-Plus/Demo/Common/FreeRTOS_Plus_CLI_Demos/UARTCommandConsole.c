@@ -73,7 +73,7 @@ void vUARTCommandConsoleStart( uint16_t usStackSize, UBaseType_t uxPriority );
 /*-----------------------------------------------------------*/
 
 /* Const messages output by the command console. */
-static const char * const pcWelcomeMessage = "FreeRTOS command server.\r\nType Help to view a list of registered commands.\r\n\r\n>";
+static const char * const pcWelcomeMessage = "RAxxx MCU CLI demo, brought to you by Future Electronics.\r\n\nFreeRTOS command server.\r\nType Help to view a list of registered commands.\r\n\r\n>";
 static const char * const pcEndOfOutputMessage = "\r\n[Press ENTER to execute the previous command again]\r\n>";
 static const char * const pcNewLine = "\r\n";
 
@@ -105,6 +105,9 @@ void vUARTCommandConsoleStart( uint16_t usStackSize, UBaseType_t uxPriority )
 #else
     extern SemaphoreHandle_t g_cli_thread_mutex;
 
+    /* parameters unused here */
+    (void) usStackSize;
+    (void) uxPriority;
     /* Demo on RA uses static allocation for console task and tx semaphore
      * so just setup and call task function here.
      */

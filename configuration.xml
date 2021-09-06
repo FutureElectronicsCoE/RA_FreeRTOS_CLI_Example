@@ -159,8 +159,8 @@
       <description>SCI UART</description>
       <originalPack>Renesas.RA.3.0.0.pack</originalPack>
     </component>
-    <component apiversion="" class="Heaps" condition="" group="FreeRTOS" subgroup="heap_1" variant="" vendor="AWS" version="3.0.0">
-      <description>FreeRTOS - Memory Management - Heap 1</description>
+    <component apiversion="" class="Heaps" condition="" group="FreeRTOS" subgroup="heap_4" variant="" vendor="AWS" version="3.0.0">
+      <description>FreeRTOS - Memory Management - Heap 4</description>
       <originalPack>Amazon.AWS.3.0.0.pack</originalPack>
     </component>
   </raComponentSelection>
@@ -196,7 +196,7 @@
       <property id="module.driver.uart.tei_ipl" value="board.icu.common.irq.priority2"/>
       <property id="module.driver.uart.eri_ipl" value="board.icu.common.irq.priority2"/>
     </module>
-    <module id="module.freertos.heap.1.257390197"/>
+    <module id="module.freertos.heap.4.1266062082"/>
     <object id="rtos.awsfreertos.object.mutex.766871304">
       <property id="rtos.awsfreertos.object.mutex.symbol" value="g_xConsoleMutex"/>
       <property id="rtos.awsfreertos.object.mutex.type" value="rtos.awsfreertos.object.mutex.type.mutex"/>
@@ -214,7 +214,7 @@
     <context id="_hal.0">
       <stack module="module.driver.ioport_on_ioport.0"/>
       <stack module="module.driver.uart_on_sci_uart.1207399385"/>
-      <stack module="module.freertos.heap.1.257390197"/>
+      <stack module="module.freertos.heap.4.1266062082"/>
     </context>
     <context id="rtos.awsfreertos.thread.0">
       <property id="_symbol" value="blinky_thread"/>
@@ -257,8 +257,8 @@
       <property id="config.awsfreertos.thread.configmax_priorities" value="5"/>
       <property id="config.awsfreertos.thread.configminimal_stack_size" value="128"/>
       <property id="config.awsfreertos.thread.configmax_task_name_len" value="16"/>
-      <property id="config.awsfreertos.thread.configuse_trace_facility" value="config.awsfreertos.thread.configuse_trace_facility.disabled"/>
-      <property id="config.awsfreertos.thread.configuse_stats_formatting_functions" value="config.awsfreertos.thread.configuse_stats_formatting_functions.disabled"/>
+      <property id="config.awsfreertos.thread.configuse_trace_facility" value="config.awsfreertos.thread.configuse_trace_facility.enabled"/>
+      <property id="config.awsfreertos.thread.configuse_stats_formatting_functions" value="config.awsfreertos.thread.configuse_stats_formatting_functions.enabled"/>
       <property id="config.awsfreertos.thread.configuse_16_bit_ticks" value="config.awsfreertos.thread.configuse_16_bit_ticks.disabled"/>
       <property id="config.awsfreertos.thread.configidle_should_yield" value="config.awsfreertos.thread.configidle_should_yield.enabled"/>
       <property id="config.awsfreertos.thread.configuse_task_notifications" value="config.awsfreertos.thread.configuse_task_notifications.enabled"/>

@@ -138,7 +138,7 @@ FSP Configuration
       P914 19 USB_FS0_DP - - - "Peripheral mode" - - "USB_FS0: DP" - IO - - 
       P915 18 USB_FS0_DM - - - "Peripheral mode" - - "USB_FS0: DM" - IO - - 
       RES# 25 SYSTEM0_RES - - - - - - - - IO "Read only" - 
-      SBIAS/VREFI 38 "SDADC0_SBIAS / SDADC0_VREFI" - - - - - - - - IO "Read only" - 
+      SBIAS/VREFI 38 "SDADC0_VREFI / SDADC0_SBIAS" - - - - - - - - IO "Read only" - 
       VCC 11 SYSTEM0_VCC - - - - - - - - IO "Read only" - 
       VCCUSB 20 USB_FS0_VCC - - - - - - - - IO "Read only" - 
       VCCUSBLDO 21 USB_FS0_VCCLDO - - - - - - - - IO "Read only" - 
@@ -204,7 +204,7 @@ FSP Configuration
       P914 19 - - - - Disabled - - "USB_FS0: DP" - IO - - 
       P915 18 - - - - Disabled - - "USB_FS0: DM" - IO - - 
       RES# 25 SYSTEM0_RES - - - - - - - - IO "Read only" - 
-      SBIAS/VREFI 38 "SDADC0_SBIAS / SDADC0_VREFI" - - - - - - - - IO "Read only" - 
+      SBIAS/VREFI 38 "SDADC0_VREFI / SDADC0_SBIAS" - - - - - - - - IO "Read only" - 
       VCC 11 SYSTEM0_VCC - - - - - - - - IO "Read only" - 
       VCCUSB 20 USB_FS0_VCC - - - - - - - - IO "Read only" - 
       VCCUSBLDO 21 USB_FS0_VCCLDO - - - - - - - - IO "Read only" - 
@@ -228,7 +228,7 @@ FSP Configuration
     DTC Support: Disable
     Flow Control Support: Disable
     
-  Module "Heap 1"
+  Module "Heap 4"
   FreeRTOS
     General: Custom FreeRTOSConfig.h: 
     General: Use Preemption: Enabled
@@ -243,8 +243,8 @@ FSP Configuration
     General: Max Priorities: 5
     General: Minimal Stack Size: 128
     General: Max Task Name Len: 16
-    Stats: Use Trace Facility: Disabled
-    Stats: Use Stats Formatting Functions: Disabled
+    Stats: Use Trace Facility: Enabled
+    Stats: Use Stats Formatting Functions: Enabled
     General: Use 16-bit Ticks: Disabled
     General: Idle Should Yield: Enabled
     General: Use Task Notifications: Enabled
@@ -324,7 +324,7 @@ FSP Configuration
       Interrupts: Transmit End Interrupt Priority: Priority 2
       Interrupts: Error Interrupt Priority: Priority 2
       
-    Instance "Heap 1"
+    Instance "Heap 4"
   Thread "Blinky Thread"
     Symbol: blinky_thread
     Name: Blinky Thread
